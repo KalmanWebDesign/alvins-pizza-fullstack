@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alvin's Pizza Website">
+    <meta name="keywords" content="Pizza Near me, Pizza restaurant">
+    <meta name="author" content="Kalman Web Design">
+    <title>Alvin's Pizzeria</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="styles/styles.css" rel="stylesheet">
+    <script src="./scripts/scripts.js" defer></script>
+
+</head>
+
+<body>
+    <!-- overlay functionality -->
+    <div id="overlay">
+        <div class="icon-container">
+            <i class="fa fa-times" title="button to close navigation" onclick="off()"></i>
+        </div>
+        <div class="overlay-text">
+            <a href="index.html">
+                Home
+            </a>
+            <a href="menu.html">
+                Menu
+            </a>
+            <a href="about.html">
+                About
+            </a>
+            <a href="order.html" class="order-nav">
+                Order
+            </a>
+        </div>
+    </div>
+    <!-- navigation -->
+    <header>
+        <nav class="nav full-nav">
+            <div>
+                <img src="images/alvins_pizza_resturant_logo.png" alt="alvin's pizza logo" style="width: 25%;">
+            </div>
+            <div>
+                <a href="index.html">
+                    Home
+                </a>
+                <a href="menu.html">
+                    Menu
+                </a>
+                <a href="about.html">
+                    About
+                </a>
+                <a href="order.html" class="order-nav">
+                    Order
+                </a>
+            </div>
+        </nav>
+
+        <!-- mobile nav -->
+        <nav class="nav mobile-nav">
+            <div>
+                <img src="images/alvins_pizza_resturant_logo.png" alt="alvin's pizza logo" style="width: 25%;">
+            </div>
+            <div>
+                <i class="fa fa-bars" title="button to open navigation" onclick="on()"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- main content -->
+    <main>
+        <!-- full width image -->
+        <!-- hero -->
+        <div class="hero-container">
+            <img class="hero-image" src="./images/pepperoni_meat_sausage_chesse_pizza_in_oven.png" loading="lazy"
+                alt="pepperoni pizza">
+            <div class="hero-text">
+                <h1>Alvin's Pizzeria</h1>
+                <a href="order.html" class="hero-btn">
+                    Order
+                </a>
+            </div>
+        </div>
+        <!-- spacer div -->
+        <div class="red-spacer"></div>
+
+        <!-- pizzas favorites -->
+        <div class="pizzas">
+            <h2>Pizza Favorites</h2>
+            <div class="pizza-grid">
+                <div class="pizza-child" data-pizza-id="1">
+                    <h4>Pepperoni Pizza $14.99</h4>
+                    <img src="./images/hot_pepperoni_pizza_near_me.png" alt="pepperoni pizza" style="width: 100%;"
+                        loading="lazy">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <div class="add-selected">
+                        <button class="minusBtn"><i class="fa-solid fa-minus"></i></button>
+                        <h4 class="counter">0</h4>
+                        <button class="plusBtn"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+                <div class="pizza-child" data-pizza-id="2">
+                    <h4>Supreme Pizza $14.99</h4>
+                    <img src="./images/hot_supreme_pizza_near_me.png" alt="supreme pizza" style="width: 100%;"
+                        loading="lazy">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <div class="add-selected">
+                        <button class="minusBtn"><i class="fa-solid fa-minus"></i></button>
+                        <h4 class="counter">0</h4>
+                        <button class="plusBtn"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+                <div class="pizza-child" data-pizza-id="3">
+                    <h4>Cheese Pizza $14.99</h4>
+                    <img src="./images/hot_cheese_pizza_near_me.png" alt="cheese pizza" style="width: 100%;"
+                        loading="lazy">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <div class="add-selected">
+                        <button class="minusBtn"><i class="fa-solid fa-minus"></i></button>
+                        <h4 class="counter">0</h4>
+                        <button class="plusBtn"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- overlay -->
+    <div>
+        <div id="cart-overlay">
+            <div id="inside-overlay">
+                <div id="text">
+                    <p>Checkout or Keep Shopping</p>
+                    <div class="order-btns">
+                        <a href="menu.html"><button class="add-to-cart">Back</button></a>
+                        <a href="order.html"><button class="add-to-cart">Checkout</button></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="select-quan-overlay">
+            <div id="inside-overlay">
+                <div id="text">
+                    <p>You must select a quantity.</p>
+                    <div class="order-btns">
+                        <a href="menu.html"><button class="add-to-cart">Back</button></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div>
+            <img src="./images/alvins_pizza_resturant_logo.png" alt="alvin's pizza logo" style="width: 10%;"
+                loading="lazy">
+        </div>
+        <div>
+            <div>
+                <a href="index.html">
+                    <h4>Home</h4>
+                </a>
+                <a href="menu.html">
+                    <h4>Menu</h4>
+                </a>
+                <a href="about.html">
+                    <h4>About</h4>
+                </a>
+                <a href="order.html">
+                    <h4>Order</h4>
+                </a>
+            </div>
+            <div>
+                <h4>Copyright 2023 Alvin's Pizzeria</h4>
+            </div>
+        </div>
+        <div>
+            <img src="./images/alvins_instagram.png" alt="instagram" style="width: 10%;" loading="lazy">
+            <img src="./images/Alvins_facebook.png" alt="facebook" style="width: 10%;" loading="lazy">
+        </div>
+    </footer>
+
+</body>
+
+</html>
