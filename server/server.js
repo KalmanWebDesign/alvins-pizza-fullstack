@@ -20,7 +20,7 @@ const storeItems = new Map([
     [6, { priceInCents: 1499, name: "Spicy Pizza" }],
 ]);
 
-app.post("https://alvins-pizza-fullstack.onrender.com/create-checkout-session", async (req, res) => {
+app.post("/create-checkout-session", async (req, res) => {
     const { items } = req.body;
 
     // Validate request body structure
