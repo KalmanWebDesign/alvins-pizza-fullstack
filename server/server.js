@@ -72,7 +72,7 @@ app.post("/create-checkout-session", async (req, res) => {
     }
 });
 
-const PORT = PORT || 5000;
+const PORT = 5000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
