@@ -18,7 +18,7 @@ form.addEventListener('submit', function (event) {
         selectedItems.push({ id: parseInt(id), quantity: parseInt(quantity) });
     });
 
-    fetch("https://alvins-pizza-fullstack.onrender.com", {
+    fetch("https://alvins-pizza-fullstack.onrender.com/create-checkout-session", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
