@@ -63,8 +63,8 @@ app.post("/create-checkout-session", async (req, res) => {
             payment_method_types: ["card"],
             mode: "payment",
             line_items: lineItems,
-            success_url: `${CLIENT_URL}/order.html`,
-            cancel_url: `${CLIENT_URL}/index.html`,
+            success_url: `${process.env.CLIENT_URL}/order.html`,
+            cancel_url: `${process.env.CLIENT_URL}/index.html`,
         });
         res.json({ url: session.url });
     } catch (e) {
@@ -72,7 +72,7 @@ app.post("/create-checkout-session", async (req, res) => {
     }
 });
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
