@@ -21,6 +21,11 @@ const storeItems = new Map([
     [6, { priceInCents: 1499, name: "Spicy Pizza" }],
 ]);
 
+// Define a route handler for the root URL ("/")
+app.get("/", (req, res) => {
+  res.send("Welcome to Alvin's Pizza!"); // You can customize this message
+});
+
 app.post("/create-checkout-session", async (req, res) => {
     const { items } = req.body;
 
