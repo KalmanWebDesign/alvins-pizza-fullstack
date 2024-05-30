@@ -5,7 +5,7 @@ const cors = require("cors");
 const app = express();
 
 const corsOptions = {
-  origin: "https://6657c9126690d56beecfb837--thunderous-dieffenbachia-b87613.netlify.app/"
+  origin: "https://6657c9126690d56beecfb837--thunderous-dieffenbachia-b87613.netlify.app"
 };
 
 app.use(cors(corsOptions));
