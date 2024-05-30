@@ -4,6 +4,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 
+app.use(express.json()); // Add this line to parse JSON requests
 app.use(cors());
 
 // Add this middleware to set the appropriate CORS headers
