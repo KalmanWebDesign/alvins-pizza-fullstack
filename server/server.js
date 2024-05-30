@@ -9,7 +9,7 @@ app.use(cors());
 
 // Add this middleware to set the appropriate CORS headers
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://6657c9126690d56beecfb837--thunderous-dieffenbachia-b87613.netlify.app");
+  res.header("Access-Control-Allow-Origin", "https://6658933d6690d524c4cfbb36--fascinating-gelato-eeea11.netlify.app");
   res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
