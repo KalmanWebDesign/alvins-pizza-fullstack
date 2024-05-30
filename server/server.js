@@ -6,7 +6,9 @@ const cors = require("cors");
 
 app.use(express.json());
 app.use(
-    cors()
+    cors({
+        origin: "https://6657b335c001c358e7e438fd--gregarious-dolphin-ff2ee8.netlify.app/",
+    })
 );
 
 const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
