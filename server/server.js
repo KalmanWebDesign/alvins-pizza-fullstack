@@ -1,15 +1,14 @@
 require("dotenv").config();
 
 const express = require("express");
-const app = express();
 const cors = require("cors");
+const app = express();
 
-app.use(express.json());
-app.use(
-    cors({
-        origin: "https://6657b335c001c358e7e438fd--gregarious-dolphin-ff2ee8.netlify.app/",
-    })
-);
+const corsOptions = {
+  origin: "https://6657b335c001c358e7e438fd--gregarious-dolphin-ff2ee8.netlify.app"
+};
+
+app.use(cors(corsOptions));
 
 const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
 
