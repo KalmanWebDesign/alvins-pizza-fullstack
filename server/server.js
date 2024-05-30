@@ -4,11 +4,15 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 
-const corsOptions = {
-  origin: "https://6657c9126690d56beecfb837--thunderous-dieffenbachia-b87613.netlify.app"
-};
+app.use(cors());
 
-app.use(cors(corsOptions));
+// Add this middleware to set the appropriate CORS headers
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "https://6657c9126690d56beecfb837--thunderous-dieffenbachia-b87613.netlify.app");
+  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
 
